@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+    <style>
+      body {
+      padding-top: 30px;
+      }
+    </style>
+
+    <title>{{book.title}}</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <header class="subhead offset4">
+          <h1>{{book.title}} <small>{{book.author}}</small></h1>
+        </header>
+      </div>
+
+      <br />
+      <div class="row">
+        <div class="span4">
+          <p>&nbsp;</p>
+        </div>
+        <div class="span6">
+          {{#clippings}}
+            <blockquote>
+              <p>{{highlight}}</p>
+              {{#notes}}
+              <small>{{.}}</small>
+              {{/notes}}
+            </blockquote>
+            <br />
+          {{/clippings}}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
